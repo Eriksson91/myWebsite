@@ -1,0 +1,36 @@
+/* *************** */
+/* ---- Fonts ---- */
+/* *************** */
+
+
+@font-face {
+    font-family: "gotham-light";
+    src: url(/build/fonts/Gotham\ Light.otf);
+}
+
+
+@font-face {
+    font-family: "gotham-regular";
+    src: url(/build/fonts/Gotham\ Regular.otf);
+}
+
+
+@font-face {
+    font-family: "gotham-medium";
+    src: url(/build/fonts/Gotham\ Medium.otf);
+}
+
+@font-face {
+    font-family: "gotham-bold";
+    src: url(/build/fonts/Gotham\ Bold.otf);
+}
+
+@font-face {
+    font-family: "gotham-book";
+    src: url(/build/fonts/Gotham\ Book.otf);
+}
+
+@font-face {
+    font-family: "rajdhani";
+    src: url(/build/fonts/Rajdhani-Bold.ttf);
+}

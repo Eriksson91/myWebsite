@@ -1,0 +1,520 @@
+/*------------*/
+/* Navigation */
+/*------------*/
+
+
+
+/* Makes navbar sticky at top of page, background white, and 2em padding top/ */
+.primary-header {
+
+    position: sticky;
+    top: 0;
+
+    background-color: #fff;
+
+    /* padding: 1.25em 0; */
+    padding: 1.75em 0;
+
+    z-index: 10;
+
+    border: 1px solid #e7e7e7;
+    
+}
+
+
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+
+
+/* Aligns all items on navbar and justyfies content with space between */
+.nav-wrapper {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* Makes so that items inside navbar always have a minimum 1em distance from page border */
+    padding: 0 1em;
+
+    /* When expanding page the navbar stops growing at 1240px */
+    max-width: 1240px;
+    width: 100%;
+
+}
+
+
+/* Logo */
+.logo {
+
+    text-decoration: none;
+    color: var(--header-text-clr-primary);
+    font-family: var(--ff-secondary);
+
+    height: 24px;
+    min-width: 141.72px;
+
+}
+
+
+/* Mobile links hidden on desktop mode */
+.mobile-nav-toggle {
+
+    display: none;
+
+}
+
+
+/* Close icon gets hidden and taken out from nav-list */
+.close {
+
+    position: absolute;
+    display: none;
+
+}
+
+
+/* Centers nav links */
+.primary-navigation {
+
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/* Navigation links */
+.nav-list {
+
+    font-size: var(--fs-base);
+    font-family: "gotham-medium";
+    
+    align-items: center;
+    justify-content: space-between;   
+
+    display: flex;
+    gap: var(--gap-45px);
+    padding-right: 2.8125rem;
+
+    transition: color 1.2s ease-in-out;
+
+}
+
+
+.nav-list a {
+
+    color: var(--clr-primary);
+    text-decoration: none;
+    
+    
+}
+
+.nav-list a:hover, 
+.nav-list a:focus {
+
+    color: var(--header-text-clr-light);
+    
+
+}
+
+
+.header-linkSpacer {
+
+    position: absolute;
+    display: block;
+    bottom: 0;
+    color: transparent;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.header-linkSpacer:after {
+
+    position: absolute;
+    content: "";
+    bottom: 0 !important;
+    left: 0;
+    width: 100%;
+    opacity: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    border-bottom: 2px solid var(--header-text-clr-light);
+    transition: transform .3s,opacity .3s;
+
+}
+
+
+
+.nav-list a:hover .header-linkSpacer:after,
+.nav-list a:focus .header-linkSpacer:after {
+
+    transform: scaleX(1);
+
+  }
+
+
+
+.nav-wrapper button:hover .header-linkSpacer:after {
+
+    transform: scaleX(1);
+
+  } 
+
+
+/* cart */
+
+.cart {
+
+    display: block;
+
+    background: transparent;
+    border: 0;
+
+    cursor: pointer;
+    color: var(--clr-primary);
+
+}
+
+
+.cart:hover {
+
+    color: var(--header-text-clr-light);
+
+}
+
+
+
+
+/*-----------*/
+/* Cart menu */
+/*-----------*/
+
+
+.cart-menu {
+    
+    display: none;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+
+.cart-primary-navigation {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.cart-nav-list {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--header-text-clr-light);
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    /* font-size: var(--fs-productPage); */
+    font-size: 19px;
+    font-family: "gotham-book"; 
+
+    border-bottom: 1px solid #e7e7e7;
+
+    width: 100%;
+
+}
+
+.cart-nav-list:hover,
+.cart-nav-list:focus {
+
+    color: var(--header-text-clr-dark);
+
+}
+
+
+.cart-nav-wrapper {
+
+    display: flex;
+
+    width: 90%;
+    
+}
+
+
+.cart-close {
+
+    display: flex;
+    cursor: pointer;
+    gap: .25rem;
+
+    padding: 1.35rem .25rem;
+
+}
+
+
+.cart-order {
+
+    margin: 1.5rem 2rem;
+
+}
+
+
+.cart-order-header {
+
+    color: var(--header-text-clr-light);
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    /* font-size: var(--fs-productPage); */
+    font-size: 16px;
+    font-family: "gotham-book";
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.cart-text {
+
+    display: block;
+
+}
+
+
+
+
+
+/*-------------------*/
+/* Mobile navigation */
+/*-------------------*/
+
+
+@media (max-width: 40em) {
+
+    /* When nav-menu opened, darkens background */
+    .primary-header[data-overlay]::before {
+        
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgba(19 18 18 / 0.5), rgba(19 18 18 / 0.5));
+
+    }
+
+
+    .primary-header {
+
+        padding: 1.25em 0;
+
+    }
+
+
+    .primary-navigation {
+
+        display: none;
+        align-items: flex-start;
+
+        position: fixed;
+        inset: 0 0 0 15%;
+        width: auto;
+
+
+        background: var(--clr-white);
+        box-shadow: 0 0 .5em rgba(0, 0, 0, 0.15);
+
+        z-index: 5;
+
+        padding-top: 1em;
+
+    }
+    
+
+
+    .nav-list {
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+        padding: 3rem 0;
+        margin: 0;
+
+        width: 90%;
+
+    }
+
+    .nav-list li {
+
+        padding-bottom: 1rem;
+        width: 100%;
+
+        border-bottom: 1px solid #e7e7e7;
+        
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: var(--fs-productPage);
+        font-family: "gotham-book";   
+        
+    }
+
+
+    /* No border on last child */
+    .nav-list li:last-child {
+
+        border: none;
+
+    }
+
+    /* Color */
+    .nav-list a {
+
+        display: flex;
+        color: var(--header-text-clr-light);
+        
+    }
+
+
+    
+    /* Hover color */
+    .nav-list a:hover, 
+    .nav-list a:focus {
+
+        color: var(--clr-primary);
+        
+    }
+
+
+    .close {
+
+        position: absolute;
+        top: 2rem;
+        left: 1.3rem;
+
+        display: inline-block;
+        justify-content: flex-end;
+        cursor: pointer;
+    
+        max-width: 20px;
+
+    }
+
+
+
+    .primary-navigation[data-visible] {
+
+        display: flex;
+
+    }
+
+
+    .mobile-nav-toggle {
+
+        display: block;
+        position: sticky;
+
+        padding: .5em;
+
+        border: 0;
+        cursor: pointer;
+        background: transparent;
+        
+        z-index: 5;
+
+    }
+
+    
+    .mobile-nav-toggle .a-close {
+
+        display: none;
+
+    }
+
+
+    .cart {
+
+        position: absolute;
+        right: 3rem;
+        padding-right: 1rem; 
+    
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        
+
+    }
+
+
+
+    .nav-wrapper button:hover .header-linkSpacer:after {
+
+        transform: scaleX(0);
+    
+      } 
+
+
+    /*-------------*/
+    /* Cart opened */
+    /*-------------*/
+    
+
+    .cart-menu[data-overlay]::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgba(19 18 18 / 0.5), rgba(19 18 18 / 0.5));
+
+    }
+
+
+    .cart-menu[data-visible] {
+
+        display: flex;
+
+    }
+
+
+    .cart-primary-navigation{
+
+        display: none;
+        /*align-items: flex-start;*/
+
+        position: fixed;
+        inset: 0 0 0 15%;
+        width: auto;
+
+        background: var(--clr-white);
+        box-shadow: 0 0 .5em rgba(0, 0, 0, 0.15);
+
+        z-index: 10;
+
+    }
+
+    .cart-primary-navigation[data-visible] {
+
+        display: block;
+
+    }
+
+}
+
+.opened {
+
+    display: block;
+    position: fixed;
+
+}

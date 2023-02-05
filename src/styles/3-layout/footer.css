@@ -1,0 +1,329 @@
+/* ************** */
+/* --- Footer --- */
+/* ************** */
+
+
+/* Footer section */
+
+.footer {
+
+    display: flex;
+    justify-content: center;
+
+    height: auto !important;
+    border-top: 1px solid #e7e7e7;
+
+    padding-bottom: 56px !important;
+    padding: 34px 24px;
+
+    color: #939393;
+    font-family: "gotham-book";
+
+}
+
+
+
+
+@media screen and (min-width: 677px) {
+
+    .footer {
+
+        padding: 75px 0 42px;
+
+    }
+}
+
+
+
+/* Footer nav */
+.footer-nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 50px;
+
+}
+
+
+/* For screen reader? */
+.footer-hidden:not(:focus):not(:active) {
+
+    clip: rect(0 0 0 0);
+    block-size: 1px;
+    border: 0;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    inline-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+
+}
+
+
+
+.footer-visually-hidden {
+
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+
+}
+
+
+
+/* Footer nav list */
+.footer-nav-list {
+
+    display: flex;
+    align-items: center;
+
+    list-style-type: none;
+    line-height: 20px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    min-height: 70px;
+}
+
+
+
+
+/* Smaller screen sizes make nav list column */
+@media (max-width: 753px) {
+
+    .footer-nav>ul {
+
+        flex-direction: column;
+
+    }
+}
+
+
+/* All <a> tags styling */
+.footer-nav>ul>li>a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.footer-nav>ul>li>a:hover {
+
+    color: #5c5c5c;
+    
+}
+
+
+
+/* Spacing between list items */
+@media (min-width: 677px) {
+
+    .footer-nav-list>li:not(:last-of-type) {
+
+        -webkit-margin-after: 0;
+        -webkit-margin-end: calc(8px + 0.5em);
+        margin-block-end: 0;
+        margin-inline-end: calc(8px + 0.5em);
+
+    }
+}
+
+
+
+/* Footer li */
+.footer-nav .footer-item {
+
+    padding: 4px 0;
+    display: inline-block;
+    
+}
+
+
+
+
+/* Newsletter form*/
+
+.newsLetter-container{
+
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 56px !important;
+    padding: 34px 24px;
+
+    color: #939393;
+    font-family: "gotham-book";
+
+}
+
+
+
+
+/* Title */
+
+@media screen and (min-width: 641px) {
+
+    .sub-title {
+
+        font-size: 15px;
+    
+    }
+}
+
+.sub-title {
+
+    margin-bottom: 20px;
+    transition: color .2s ease-in-out;
+}
+
+
+
+
+/* Text conent */
+
+.sub-content {
+
+    word-break: break-word;
+
+}
+
+
+
+.sub-content:last-child {
+
+    margin-bottom: 0;
+    font-size: inherit;
+
+}
+
+
+
+.sub-content:after {
+
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+
+
+/* Form */
+.sub-content+.footer-newsletter {
+
+    margin-top: 18px;
+
+}
+
+.form {
+
+    width: 100%;
+
+}
+
+
+.form-input {
+
+    -webkit-appearance: none;
+    display: block;
+    padding: 12px 14px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    line-height: normal;
+    resize: none;
+    transition: border-color .1s ease-in-out;
+    background: transparent;
+
+}
+
+
+
+
+.form-button {
+
+    position: relative;
+    display: inline-block;
+    padding: 14px 28px;
+    line-height: normal;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
+    text-align: center;
+    letter-spacing: .2em;
+    background-color: transparent;
+    transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
+    z-index: 1;
+    -webkit-tap-highlight-color: initial;
+    overflow: visible;
+    background: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+
+}
+
+
+.button-primary{
+
+    color: #ffffff;
+    border-color: #5c5c5c;
+
+}
+
+
+.form-submit {
+
+    display: block;
+    margin-top: 20px;
+
+}
+
+
+
+/* Before */
+
+.form-button:before {
+
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transform-origin: left center;
+    z-index: -1;
+    
+}
+
+
+.button-primary:before {
+
+    background-color: #5c5c5c;
+
+}
+
+
+
+
+@media (-moz-touch-enabled: 0), (hover: hover) {
+
+    .form-button:not([disabled]):before {
+
+        transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+
+    }
+}

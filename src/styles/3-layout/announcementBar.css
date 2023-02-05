@@ -1,0 +1,36 @@
+/* -----------------*/
+/* Announcement Bar */
+/* -----------------*/
+
+.section-announcement {
+    background: var(--clr-secondary);
+    color: var(--clr-primary-light);
+    font-family: "gotham-light";
+    z-index: 5;
+    position: relative;
+
+    scroll-snap-align: start;
+}
+
+.announcementBar {
+    text-align: center;
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 10px));
+    
+  }
+  
+  .announcementBar-wrapper {
+    padding: 12px 15px;
+    
+  }
+  
+  .announcementBar-Content {
+    color: inherit;
+    margin: 0;
+    
+  }
+  
+  @media screen and (min-width: 641px) {
+    .announcementBar {
+      font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 11px));
+    }
+  }
